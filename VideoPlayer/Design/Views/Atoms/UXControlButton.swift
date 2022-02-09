@@ -52,8 +52,10 @@ private extension UXControlButton {
     func setup() {
         backgroundColor    = UIColor.Theme.accent
         tintColor          = UIColor.Theme.white
-        layer.cornerRadius = uiConstants.cornerRadius
+        
         setTitle("", for : .normal)
+        
+        applyWhiteShadow(cornerRadius: uiConstants.cornerRadius)
         
     }
     

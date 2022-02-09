@@ -21,4 +21,13 @@ extension UIView {
         
         return view
     }
+    
+    func applyWhiteShadow(cornerRadius: CGFloat = .zero) {
+        layer.shadowColor   = UIColor.white.cgColor
+        layer.shadowOffset  = CGSize(width : 0.0, height : 2.0)
+        layer.shadowOpacity = 0.3
+        layer.shadowRadius  = 0.0
+        layer.masksToBounds = false
+        layer.cornerRadius  = cornerRadius
+    }
 }

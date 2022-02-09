@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 private enum VideoURLS {
-    static let space = URL(string: "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1280_10MG.mp4")!
+    static let space = URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")! //"https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1280_10MG.mp4")!
 }
 
 private enum Constants {
