@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlayerViewController.swift
 //  VideoPlayer
 //
 //  Created by Vadym Piatkovskyi on 09.02.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
