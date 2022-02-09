@@ -16,6 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y35-72-qPa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-Zf-Zgd">
+                                <rect key="frame" x="0.0" y="712" width="414" height="184"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUU-Za-6zJ" customClass="UXPlayerControlsView" customModule="VideoPlayer" customModuleProvider="target">
                                 <rect key="frame" x="16" y="712" width="382" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -27,15 +35,28 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Y35-72-qPa" secondAttribute="trailing" id="4fP-2D-sS2"/>
+                            <constraint firstAttribute="trailing" secondItem="K6c-Zf-Zgd" secondAttribute="trailing" id="4z6-kf-upO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dUU-Za-6zJ" secondAttribute="bottom" id="Gag-Y0-yki"/>
+                            <constraint firstItem="Y35-72-qPa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q2i-eQ-8qW"/>
+                            <constraint firstItem="Y35-72-qPa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cMH-3m-reo"/>
+                            <constraint firstAttribute="bottom" secondItem="K6c-Zf-Zgd" secondAttribute="bottom" id="d7s-pP-tdT"/>
+                            <constraint firstItem="K6c-Zf-Zgd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oCv-ZM-95Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dUU-Za-6zJ" secondAttribute="trailing" constant="16" id="q5U-z0-iVY"/>
+                            <constraint firstItem="K6c-Zf-Zgd" firstAttribute="top" secondItem="dUU-Za-6zJ" secondAttribute="top" id="vw5-BO-jQh"/>
                             <constraint firstItem="dUU-Za-6zJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xOy-U8-e1c"/>
+                            <constraint firstAttribute="bottom" secondItem="Y35-72-qPa" secondAttribute="bottom" id="yti-w9-36y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="controlsView" destination="dUU-Za-6zJ" id="ar3-Pp-NjU"/>
+                        <outlet property="gradientContainerView" destination="K6c-Zf-Zgd" id="9Sc-cP-nl6"/>
+                        <outlet property="videoContainerView" destination="Y35-72-qPa" id="aNf-Hf-MLC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
@@ -44,6 +65,12 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

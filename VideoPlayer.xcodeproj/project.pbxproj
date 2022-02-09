@@ -23,6 +23,7 @@
 		5A3A8A9E27B41DBE00A9E753 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A8A9D27B41DBE00A9E753 /* UIViewExtensions.swift */; };
 		5A3A8AA027B41EA900A9E753 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A8A9F27B41EA900A9E753 /* TimeIntervalExtensions.swift */; };
 		5A3A8AA227B4212700A9E753 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A8AA127B4212700A9E753 /* UIColorExtensions.swift */; };
+		5A3A8AA427B4230100A9E753 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A8AA327B4230100A9E753 /* CollectionExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		5A3A8A9D27B41DBE00A9E753 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		5A3A8A9F27B41EA900A9E753 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		5A3A8AA127B4212700A9E753 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		5A3A8AA327B4230100A9E753 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				5A3A8A9D27B41DBE00A9E753 /* UIViewExtensions.swift */,
 				5A3A8A9F27B41EA900A9E753 /* TimeIntervalExtensions.swift */,
 				5A3A8AA127B4212700A9E753 /* UIColorExtensions.swift */,
+				5A3A8AA327B4230100A9E753 /* CollectionExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				5A3A8AA227B4212700A9E753 /* UIColorExtensions.swift in Sources */,
 				5A3A8A9C27B41D9500A9E753 /* typealiases.swift in Sources */,
 				5A3A8A8D27B4160900A9E753 /* UXSlider.swift in Sources */,
+				5A3A8AA427B4230100A9E753 /* CollectionExtensions.swift in Sources */,
 				5A34FFFA27B414690069EB71 /* AppDelegate.swift in Sources */,
 				5A3A8A9E27B41DBE00A9E753 /* UIViewExtensions.swift in Sources */,
 				5A3A8A9527B41AE800A9E753 /* UXControlButton.swift in Sources */,

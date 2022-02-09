@@ -8,8 +8,6 @@
 import Foundation
 
 extension TimeInterval {
-    
-    // MARK: Public properties
     var playerHourMinuteSecond: String {
         return String(format: "%i:%02i:%02i", arguments: [hour, minute, second])
     }
@@ -17,20 +15,19 @@ extension TimeInterval {
         return String(format: "%02i:%02i", arguments: [minute, second])
     }
     
-    // MARK: Private properties
-    private var hour: Int {
+    var hour: Int {
         return Int((self/3600).truncatingRemainder(dividingBy: 60))
     }
     
-    private var minute: Int {
+    var minute: Int {
         return Int((self/60).truncatingRemainder(dividingBy: 60))
     }
     
-    private var second: Int {
+    var second: Int {
         return Int(truncatingRemainder(dividingBy: 60))
     }
     
-    private var millisecond: Int {
+    var millisecond: Int {
         return Int((self*1000).truncatingRemainder(dividingBy: 1000))
     }
 }
