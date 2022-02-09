@@ -15,6 +15,10 @@ enum PlayerControlButton {
     case nextVideo
 }
 
+private enum uiConstants {
+    static let cornerRadius: CGFloat = 4
+}
+
 class UXControlButton: UIButton {
     var type: PlayerControlButton = .playPause {
         didSet {
@@ -46,9 +50,11 @@ class UXControlButton: UIButton {
 // MARK: Private methods
 private extension UXControlButton {
     func setup() {
-        backgroundColor = UIColor.Theme.accent
-        tintColor = UIColor.Theme.white
-        setTitle("", for: .normal)
+        backgroundColor    = UIColor.Theme.accent
+        tintColor          = UIColor.Theme.white
+        layer.cornerRadius = uiConstants.cornerRadius
+        setTitle("", for : .normal)
+        
     }
     
     func refreshAppearance() {
