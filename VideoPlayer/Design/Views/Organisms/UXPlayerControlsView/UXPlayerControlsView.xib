@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UXPlayerControlsView" customModule="VideoPlayer" customModuleProvider="target">
+            <connections>
+                <outlet property="controlStackView" destination="Prk-uR-n9m" id="9gK-lz-bcl"/>
+                <outlet property="currentTimeLabel" destination="jJi-gP-NJc" id="uuh-cD-75b"/>
+                <outlet property="nextVideoButton" destination="Zx0-AY-EaM" id="MWJ-Qb-8nM"/>
+                <outlet property="playPauseButton" destination="vQB-gl-kvc" id="DPD-F0-Rmp"/>
+                <outlet property="previousVideoButton" destination="0Zl-U3-cpC" id="BSS-Kl-Epu"/>
+                <outlet property="seekBackwardButton" destination="JE7-PF-bmT" id="JOd-l8-srq"/>
+                <outlet property="seekForwardButton" destination="oJx-Ep-hH9" id="elG-zW-DYF"/>
+                <outlet property="slider" destination="wPG-0q-4WL" id="hJk-Rn-ZKo"/>
+                <outlet property="totalTimeLabel" destination="OMl-yW-CFO" id="5th-3b-7og"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wPG-0q-4WL" customClass="UXSlider" customModule="VideoPlayer" customModuleProvider="target">
+                    <rect key="frame" x="3" y="0.0" width="408" height="31"/>
+                    <connections>
+                        <action selector="sliderValueChangeAction:" destination="-1" eventType="valueChanged" id="QmP-7a-FFW"/>
+                    </connections>
+                </slider>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EON-nq-EDP">
+                    <rect key="frame" x="0.0" y="32" width="414" height="20.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJi-gP-NJc">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMl-yW-CFO">
+                            <rect key="frame" x="215" y="0.0" width="199" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Prk-uR-n9m">
+                    <rect key="frame" x="49" y="57.5" width="316" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zl-U3-cpC" customClass="UXControlButton" customModule="VideoPlayer" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="8" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="ARg-o6-BEN"/>
+                                <constraint firstAttribute="height" constant="40" id="cOP-7y-uJj"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="previousButtonAction" destination="-1" eventType="touchUpInside" id="tyM-vp-SVY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE7-PF-bmT" customClass="UXControlButton" customModule="VideoPlayer" customModuleProvider="target">
+                            <rect key="frame" x="69" y="8" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="78h-af-iGW"/>
+                                <constraint firstAttribute="height" constant="40" id="G2n-ZY-zZf"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="seekBackwardButtonAction" destination="-1" eventType="touchUpInside" id="73N-zg-ayS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQB-gl-kvc" customClass="UXControlButton" customModule="VideoPlayer" customModuleProvider="target">
+                            <rect key="frame" x="130" y="0.0" width="56" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="FwO-pQ-ZpI"/>
+                                <constraint firstAttribute="width" constant="56" id="jAG-yy-G0K"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="playPauseButtonAction" destination="-1" eventType="touchUpInside" id="DnO-5w-9eK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJx-Ep-hH9" customClass="UXControlButton" customModule="VideoPlayer" customModuleProvider="target">
+                            <rect key="frame" x="207" y="8" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Eox-5q-xUF"/>
+                                <constraint firstAttribute="height" constant="40" id="XeP-WX-5CL"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="seekForwardButtonAction" destination="-1" eventType="touchUpInside" id="hrx-WC-Y2l"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx0-AY-EaM" customClass="UXControlButton" customModule="VideoPlayer" customModuleProvider="target">
+                            <rect key="frame" x="276" y="8" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="keM-kT-nHM"/>
+                                <constraint firstAttribute="height" constant="40" id="s6z-Fv-H0V"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="nextVideoButtonAction" destination="-1" eventType="touchUpInside" id="u7g-4E-6GD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wPG-0q-4WL" secondAttribute="trailing" constant="5" id="2aG-0W-ByP"/>
+                <constraint firstItem="Prk-uR-n9m" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JNK-yr-LZg"/>
+                <constraint firstItem="EON-nq-EDP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JWS-nb-bTt"/>
+                <constraint firstItem="Prk-uR-n9m" firstAttribute="top" secondItem="EON-nq-EDP" secondAttribute="bottom" constant="5" id="NMO-wl-Ib0"/>
+                <constraint firstItem="EON-nq-EDP" firstAttribute="top" secondItem="wPG-0q-4WL" secondAttribute="bottom" constant="2" id="SYY-Hz-bgt"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Prk-uR-n9m" secondAttribute="trailing" id="Y54-kb-Bi9"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Prk-uR-n9m" secondAttribute="bottom" id="blK-qe-iAr"/>
+                <constraint firstItem="Prk-uR-n9m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" id="eAt-17-va0"/>
+                <constraint firstAttribute="trailing" secondItem="EON-nq-EDP" secondAttribute="trailing" id="fuM-YU-oDj"/>
+                <constraint firstItem="wPG-0q-4WL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nx5-Lb-idd"/>
+                <constraint firstItem="wPG-0q-4WL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="qwt-kE-J4I"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>
+        </view>
+    </objects>
+</document>

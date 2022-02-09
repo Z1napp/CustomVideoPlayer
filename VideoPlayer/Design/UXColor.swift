@@ -10,8 +10,8 @@ import UIKit
 
 extension UIColor {
     enum Theme {
-        static let white      = UIColor(red : 255, green : 255, blue : 255, alpha : 1)
-        static let accent     = UIColor(red : 46, green  : 40, blue  : 54, alpha  : 1)
-        static let background = UIColor(red : 245, green : 233, blue : 189, alpha : 1)
+        static let white      = UIColor(hexString: "#FFFFFF")
+        static let accent     = UIColor(hexString: "#2E2836")
+        static let background = UIColor(hexString: "#F5E9BD")
     }
 }
